@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a modern, minimalist portfolio template built with Astro and Tailwind CSS v4. It's designed to be easily customizable through a single configuration file while maintaining a clean, professional appearance.
+This is a personal portfolio site built with Astro and Tailwind CSS v4. Content is customized through a single configuration file.
 
 ## Tech Stack
 
