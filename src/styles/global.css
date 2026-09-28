@@ -3,3 +3,19 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+html[data-locale="fr"] [data-lang="en"],
+html:not([data-locale]) [data-lang="en"] {
+  display: none;
+}
+
+html[data-locale="en"] [data-lang="fr"] {
+  display: none;
+}
+
+html[data-locale="fr"] .locale-btn[data-set-locale="fr"],
+html:not([data-locale]) .locale-btn[data-set-locale="fr"],
+html[data-locale="en"] .locale-btn[data-set-locale="en"] {
+  color: var(--accent-color, #1d4ed8);
+  font-weight: 700;
+}

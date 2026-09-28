@@ -1,0 +1,57 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+
+interface Props {
+  titleFr?: string;
+  titleEn?: string;
+  descriptionFr?: string;
+  descriptionEn?: string;
+}
+
+const titleFr =
+  Astro.props.titleFr ?? `${siteConfig.name} - ${siteConfig.title.fr}`;
+const titleEn =
+  Astro.props.titleEn ?? `${siteConfig.name} - ${siteConfig.title.en}`;
+const descriptionFr = Astro.props.descriptionFr ?? siteConfig.description.fr;
+const descriptionEn = Astro.props.descriptionEn ?? siteConfig.description.en;
+---
+
+<html lang="fr" data-locale="fr">
+  <head>
+    <meta charset="utf-8" />
+    <script is:inline>
+      (function () {
+        var lang = localStorage.getItem("locale") || "fr";
+        if (lang !== "en") lang = "fr";
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.locale = lang;
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={descriptionFr} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{titleFr}</title>
+  </head>
+  <body
+    class="bg-white"
+    style={`--accent-color: ${siteConfig.accentColor}`}
+    data-title-fr={titleFr}
+    data-title-en={titleEn}
+    data-description-fr={descriptionFr}
+    data-description-en={descriptionEn}
+  >
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

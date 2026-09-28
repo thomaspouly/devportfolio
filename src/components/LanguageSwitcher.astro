@@ -1,0 +1,46 @@
+---
+---
+
+<div
+  class="flex items-center gap-1 text-sm font-medium"
+  role="group"
+  aria-label="Langue / Language"
+>
+  <button
+    type="button"
+    data-set-locale="fr"
+    class="locale-btn px-1.5 py-0.5 rounded transition-colors"
+  >
+    FR
+  </button>
+  <span class="text-gray-300" aria-hidden="true">/</span>
+  <button
+    type="button"
+    data-set-locale="en"
+    class="locale-btn px-1.5 py-0.5 rounded transition-colors"
+  >
+    EN
+  </button>
+</div>
+
+<script>
+  function setLocale(lang: string) {
+    const locale = lang === "en" ? "en" : "fr";
+    localStorage.setItem("locale", locale);
+    document.documentElement.lang = locale;
+    document.documentElement.dataset.locale = locale;
+
+    const suffix = locale === "en" ? "En" : "Fr";
+    const title = document.body.dataset[`title${suffix}`];
+    if (title) document.title = title;
+    const description = document.body.dataset[`description${suffix}`];
+    const meta = document.querySelector('meta[name="description"]');
+    if (description && meta) meta.setAttribute("content", description);
+  }
+
+  document.querySelectorAll<HTMLButtonElement>("[data-set-locale]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setLocale(button.dataset.setLocale ?? "fr");
+    });
+  });
+</script>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="390" height="844" fill="#F8FAFC"/>
+  <rect x="24" y="56" width="180" height="14" rx="7" fill="#1D4ED8"/>
+  <rect x="24" y="86" width="200" height="28" rx="8" fill="#111827"/>
+  <circle cx="80" cy="220" r="48" fill="#DBEAFE"/>
+  <circle cx="195" cy="220" r="48" fill="#E5E7EB"/>
+  <circle cx="310" cy="220" r="48" fill="#E5E7EB"/>
+  <rect x="24" y="300" width="342" height="16" rx="8" fill="#E5E7EB"/>
+  <rect x="24" y="300" width="210" height="16" rx="8" fill="#1D4ED8"/>
+  <rect x="24" y="340" width="342" height="120" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="44" y="364" width="240" height="12" rx="6" fill="#9CA3AF"/>
+  <rect x="44" y="392" width="300" height="12" rx="6" fill="#D1D5DB"/>
+  <rect x="44" y="416" width="260" height="12" rx="6" fill="#D1D5DB"/>
+  <rect x="24" y="740" width="342" height="52" rx="14" fill="#111827"/>
+  <text x="195" y="772" text-anchor="middle" fill="white" font-family="monospace" font-size="14">Screen 2</text>
+</svg>
