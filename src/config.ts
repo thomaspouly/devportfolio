@@ -38,7 +38,7 @@ export const siteConfig = {
   accentColor: "#1d4ed8",
   social: {
     email: "tpouly@live.fr",
-    linkedin: "https://linkedin.com/in/thomaspouly",
+    linkedin: "https://www.linkedin.com/in/thomaspouly",
     twitter: "",
     github: "https://github.com/thomaspouly",
   },
